@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
+    dd(420);
     return view('welcome');
 });
+
+// dd(request());

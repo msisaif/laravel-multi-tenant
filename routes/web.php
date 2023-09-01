@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::domain('localhost')->group(function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+});
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return app('currentTenant');
 });
